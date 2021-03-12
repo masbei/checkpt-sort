@@ -1,0 +1,15 @@
+ALGORITHM sort
+VAR
+T:ARRAY_OF INTEGER;
+i,j,aux: INTEGER;
+BEGIN
+    FOR i FROM 1 TO T.length-1 DO
+        aux := T [i];
+        j := i-1;
+        WHILE (j >= 0 AND arr[j] > aux) DO
+            T[j+1] := T[j];
+            j := j-1;
+        END_WHILE
+        T[j+1] = aux;
+    END_FOR
+END
